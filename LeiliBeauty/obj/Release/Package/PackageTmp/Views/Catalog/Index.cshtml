@@ -1,0 +1,76 @@
+﻿@model LeiliBeauty.Models.CatalogViewModels
+@{
+    ViewBag.Title = "کاتالوگ اوریفلیم";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body>
+    <section class="clearfix pricingSection">
+        <div class="container">
+            <div class="secotionTitle">
+                <h2><span>Catalog @Model.CatalogName</span>قیمت ها و تخفیف ها</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 col-sm-10 col-xs-9">
+                    <input placeholder="متن مورد نظر برای جستجو را وارد نمایید" type="text" id="SearchText" class="form-control" alt="اوریفلیم لیلی موجودی" />
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-3">
+                    @Html.ActionLink("جستجو", "Index", "Catalog", null, new { onclick = "this.href += '?filter=' + document.getElementById('SearchText').value;", @class = "btn btn-primary btn-block", @alt = "اوریفلیم لیلی موجودی" })
+                </div>
+            </div>
+
+
+            @if (Model.Products == null || Model.Products.Count <= 0)
+            {
+                <p>
+                    محصولی با این مشخصات در این کاتالوگ تخفیف نخورده است
+                </p>
+            }
+
+            @foreach (LeiliBeauty.Models.ProductViewModels[] products in Model.Products)
+            {
+                <div class="row">
+                    @foreach (LeiliBeauty.Models.ProductViewModels product in products)
+                    {
+                        if (product != null)
+                        {
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="priceTableWrapper">
+                                    <div class="priceImage" style="background-image: url(@product.ImagUrls.DefaultIfEmpty("~/img/logo.png").First());">
+                                        <img src="@Url.Content(product.ImagUrls.DefaultIfEmpty("~/img/logo.png").First())" alt="Image Price" class="img-responsive">
+                                        @*<div class="productMask">
+                                            <ul class="list-inline productOption">
+                                                <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+                                                <li><a href="@Url.Action("AddToBasket", "Catalog",new {product= product })"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>                                                
+                                            </ul>
+                                        </div>*@                                        
+                                        <div class="priceTag">
+                                            <h4>@product.ProductCode</h4>
+                                        </div>
+                                        @if ( product.IsSpecialCondition)
+                                        {
+                                            <div class="SpecialCondition" ></div>
+                                        }
+
+                                    </div>
+                                    <div class="priceInfo">
+                                        <ul class="list-unstyled">                                            
+                                            <li>@product.PersianName</li>
+                                            <li>@product.EnglishName</li>
+                                            <li>@product.Description100Char</li>
+                                            <li>@product.Discount تومان</li>
+                                        </ul>
+                                        @Html.ActionLink("اطلاعات بیشتر", "Index", "Product", new { productCode = product.ProductCode, InCatalog = true }, new { @class = "btn btn-primary first-btn" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+
+                    }
+                </div>
+            }
+        </div>
+    </section>
+</body>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-16"?>
+<LogConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ArchivePeriod="7" WriterPort="2051" ReaderPort="2050" DailyLog="true" LogFileQuota="100000000" LogDirectory="C:\" LogFileName="logger" LoggerEventFile="LoggerEvent.log" ServiceAddress="127.0.0.1" SmoothScroll="true" BufferSize="2000" BufferEdgeSize="100" xmlns="http://tempuri.org/LogConfig.xsd" />

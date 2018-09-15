@@ -1,0 +1,96 @@
+.thumbnailCarousel .carousel-control {
+      width: 4% !important;
+      background-image: none !important;
+    }
+    .thumbnailCarousel .carousel-control.left {
+      margin-left: 15px !important;
+    }
+    .thumbnailCarousel .carousel-control.right {
+      margin-right: 15px !important;
+    }
+    @media all and (max-width: 767px){
+      .thumbnailCarousel .cloneditem-1,
+      .thumbnailCarousel .cloneditem-2,
+      .thumbnailCarousel .cloneditem-3 {
+        display: none !important;
+      }
+    }
+    @media all and (min-width: 768px) {
+      .thumbnailCarousel .carousel-inner > .active.left,
+      .thumbnailCarousel .carousel-inner > .prev {
+        left: -100% !important;
+      }
+      .thumbnailCarousel .carousel-inner > .active.right,
+      .thumbnailCarousel .carousel-inner > .next {
+        left: 100% !important;
+      }
+      .thumbnailCarousel .carousel-inner > .left,
+      .thumbnailCarousel .carousel-inner > .prev.right,
+      .thumbnailCarousel .carousel-inner > .active {
+        left: 0 !important;
+      }
+      .thumbnailCarousel .carousel-inner .cloneditem-1 {
+        display: block !important;
+      }
+    }
+    @media all and (min-width: 768px) and (transform-3d), all and (min-width: 768px) and (-webkit-transform-3d) {
+      .thumbnailCarousel .carousel-inner > .item.active.right,
+      .thumbnailCarousel .carousel-inner > .item.next {
+        -webkit-transform: translate3d(100%, 0, 0) !important;
+        transform: translate3d(100%, 0, 0) !important;
+        left: 0 !important;
+      }
+      .thumbnailCarousel .carousel-inner > .item.active.left,
+      .thumbnailCarousel .carousel-inner > .item.prev {
+        -webkit-transform: translate3d(-100%, 0, 0) !important;
+        transform: translate3d(-100%, 0, 0) !important;
+        left: 0 !important;
+      }
+      .thumbnailCarousel .carousel-inner > .item.left,
+      .thumbnailCarousel .carousel-inner > .item.prev.right,
+      .thumbnailCarousel .carousel-inner > .item.active {
+        -webkit-transform: translate3d(0, 0, 0) !important;
+        transform: translate3d(0, 0, 0) !important;
+        left: 0 !important;
+      }
+    }
+    @media all and (min-width: 992px) {
+      .thumbnailCarousel .carousel-inner > .active.left,
+      .thumbnailCarousel .carousel-inner > .prev {
+        left: -100% !important;
+      }
+      .thumbnailCarousel .carousel-inner > .active.right,
+      .thumbnailCarousel .carousel-inner > .next {
+        left: 100% !important;
+      }
+      .thumbnailCarousel .carousel-inner > .left,
+      .thumbnailCarousel .carousel-inner > .prev.right,
+      .thumbnailCarousel .carousel-inner > .active {
+        left: 0 !important;
+      }
+      .thumbnailCarousel .carousel-inner .cloneditem-2,
+      .thumbnailCarousel .carousel-inner .cloneditem-3 {
+        display: block !important;
+      }
+    }
+    @media all and (min-width: 992px) and (transform-3d), all and (min-width: 992px) and (-webkit-transform-3d) {
+      .thumbnailCarousel .carousel-inner > .item.active.right,
+      .thumbnailCarousel .carousel-inner > .item.next {
+        -webkit-transform: translate3d(100%, 0, 0) !important;
+        transform: translate3d(100%, 0, 0) !important;
+        left: 0 !important;
+      }
+      .thumbnailCarousel .carousel-inner > .item.active.left,
+      .thumbnailCarousel .carousel-inner > .item.prev {
+        -webkit-transform: translate3d(-100%, 0, 0) !important;
+        transform: translate3d(-100%, 0, 0) !important;
+        left: 0;
+      }
+      .thumbnailCarousel .carousel-inner > .item.left,
+      .thumbnailCarousel .carousel-inner > .item.prev.right,
+      .thumbnailCarousel .carousel-inner > .item.active {
+        -webkit-transform: translate3d(0, 0, 0) !important;
+        transform: translate3d(0, 0, 0) !important;
+        left: 0 !important;
+      }
+    }

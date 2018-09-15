@@ -1,0 +1,26 @@
+﻿@model LeiliBeauty.Models.Order
+
+<div class="panel panel-default cartInfo">
+    <div class="panel-heading patternbg"><span class="pull-right">لطفا اطلاعات زیر را با دقت پرکنید</span></div>
+    <div class="panel-body">
+        <div class="input-group">
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.CustomerName, new { placeholder = "نام کامل تحویل گیرنده", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.CustomerName, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.PhoneNumber, new { placeholder = "شماره تلفن به همراه کد", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.TextAreaFor(m => m.Address, new { placeholder = "آدرس پستی", @class = "form-control", style = "height: 100px" })
+                @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.PostallCode, new { placeholder = "کد پستی", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.PostallCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <input type="submit" class="btn btn-primary btn-block" name="submitButton" value="درگاه پرداخت" />
+    </div>
+</div>

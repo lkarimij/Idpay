@@ -1,0 +1,19 @@
+﻿@model LeiliBeauty.Models.ErrorModel
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+</head>
+<body>
+    <hgroup>
+        <h1>Error.</h1>
+        <h2>An error occurred while processing your request.</h2>
+    </hgroup>
+    <p class="alert-danger">
+
+        @Html.DisplayFor(m => m.ErrorMessage)
+
+    </p>
+    <input type="button" class="btn btn-karimi submit" value="Back" onclick="location.href='@Url.Action(@Model.Action, @Model.Controller)'" />
+</body>
+</html>

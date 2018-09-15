@@ -1,0 +1,482 @@
+﻿@model LeiliBeauty.Models.HomeViewModels
+@{
+    ViewBag.Title = "زیبایی لیلی";
+}
+<body>
+    <!-- MAIN SLIDER -->
+    <section class="main-slider" data-loop="true" data-autoplay="true" data-interval="7000">
+        <div class="inner">
+
+            <!-- Slide One -->
+            <div class="slide slideResize slide1" style="background-image: url(../../img/home/home-slider-1.jpg);">
+                <div class="container">
+                    <div class="slide-inner1 common-inner">
+                        <span class="h1 from-bottom">GIORDANI GOLD</span><br>
+                        <span class="h4 from-bottom">با 40 سال سابقه تولید محصولات آرایشی از مواد اولیه منحصر به فرد </span><br>
+                        @Html.ActionLink("مشاهده موجودی", "Index", "Product", null, new { @class = "btn btn-primary first-btn waves-effect waves-light scale-up" })
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide Two -->
+            <div class="slide slideResize slide2" style="background-image: url(../../img/home/home-slider-2.jpg);">
+                <div class="container">
+                    <div class="slide-inner2 common-inner">
+                        <span class="h1 from-bottom">THE ONE</span><br>
+                        <span class="h4 from-bottom">دوان برندی معتبر جهت آرایش که ظاهر شما را به سطحی برتر ارتقا میدهد</span><br>
+                        @Html.ActionLink("محصولات و قیمت ها", "Index", "Product", null, new { @class = "btn btn-primary first-btn waves-effect waves-light scale-up" })
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide Three -->
+            <div class="slide slideResize slide3" style="background-image: url(../../img/home/home-slider-3.jpg);">
+                <div class="container">
+                    <div class="common-inner slide-inner3">
+                        <img src="~/img/favicon.png" alt="oriflame Leili Logo" class="img-responsive">
+                        <span class="h1 from-bottom">محصولات ضد پیری</span><br>
+                        <span class="h4 from-bottom">جوان سازی و تحریک عمیق کلاژن سازی، تقویت الاستینه و افزایش استحکام پوست </span><br>
+                        @*<a target="_blank" href="javascript:void(0);" class="btn btn-primary first-btn waves-effect waves-light scale-up">Buy Now</a>*@
+                        @Html.ActionLink("به ما بپیوندید", "Cooperation", "Home", null, new { @class = "btn btn-primary first-btn waves-effect waves-light scale-up" })
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide Four -->
+            <div class="slide slideResize slide4" style="background-image: url(../../img/home/home-slider-4.jpg);">
+                <div class="container">
+                    <div class="common-inner slide-inner4">
+                        <span class="h1 from-bottom">FOR MEN</span><br>
+                        <span class="h4 from-bottom">
+                            ارائه مجموعه ای عالی از فرمول های تازه <br/>
+                            به طور موثر و انحصاری برای مردانی که به ظاهر خود اهمیت میدهند
+                        </span><br>
+                        @Html.ActionLink("محصولات و قیمت ها", "Index", "Product", null, new { @class = "btn btn-primary first-btn waves-effect waves-light scale-up" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="container-fluid clearfix aboutSection patternbg">
+        <div class="aboutInner">
+            <div class="sepcialContainer">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12 rightPadding">
+                        <div class="imagebox ">
+                            <img src="~/img/home/home-about.jpg" alt="مجموعه جوردانی اوریفلیم لیلی" class="img-responsive">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="aboutInfo">
+                            <h2>About Oriflame</h2>
+                            <h3>محصولات اوريف ليم داراي استانداردجهاني مرغوبيت كالا مي باشند.</h3>
+                            <p style="text-align:justify">
+                                محصولات اوریف لیم تحت نظارت متخصصان تولیدات کالاهای آرایشی- بهداشتی (CGMP) کنترل وبازرسی میشود و از این جهت در سلامت و کیفیت اوریف لیم هیچ جای شکی باقی نمی ماند.
+                                محصولات اوريف ليم داراي تائيديه جهاني عدم آزمايش بروي حيوانات هستند( رفاه حيوانات + نتيجه مطمئن تر به دليل تست بر روي انسان)
+                                محصولات اوريف ليم براي حساس ترين پوست ها موثر و بي خطر هستند.
+                                اوريف ليم تاكيد بر استفاده از مواد و عصاره هاي طبيعي دارد.
+                                اوریف لیم به دلیل حمایت از محیط زیست و سلامت مصرف کننده در بسته بندی های محصولات و حتی کاغذ های کاتالوگ ها، تا جای ممکن ازpvc استفاده نکرده و از محصولات قابل بازیافت و بازمانده چوبهای جنگلهای تحت کنترل بهره برده است.
+                                به دلیل سیستم فروش مستقیم در هیچ کجای دنیا نمایندگی و دفتری با نام نمایندگی اوریف لیم وجود ندارد.
+                                هر محصول جهت سنین خاص و پوستهای متفاوتی تهیه شده است که با توجه به این مشخصات میتوانید بهترین نتیجه را بر روی پوست خود ببینید.
+                                اوریف لیم بخش قابل توجهی از درآمد خود را صرف امور خیریه و بشر دوستانه میکند و حامی و عضو فعال بنیاد کودکان جهان میباشد.
+                                کافیست یکبار از یکی از محصولات اوریف لیم استفاده کنید تا شما هم به جمع خانواده اوریف لیم بپیوندید.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFERS SECTION -->
+    <section class="clearfix offersSection patternbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-xs-12">
+                    <div class="offerContent">
+                        <img src="~/img/home/offer-1.jpg" alt="پرفیوم اوریفلیم در زیبایی لیلی">
+                        <div class="offerMasking">
+                            <div class="offerTitle"><h4><a href="javascript:void(0);">Possess men</a></h4></div>
+                        </div>
+                        <div class="offerPrice"><h5>$-</h5></div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <div class="offerContent">
+                        <img src="~/img/home/offer-2.jpg" alt="پرفیوم اوریفلیم در زیبایی لیلی">
+                        <div class="offerMasking">
+                            <div class="offerTitle"><h4><a href="javascript:void(0);">Giordani Gold</a></h4></div>
+                        </div>
+                        <div class="offerPrice"><h5>$-</h5></div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <div class="offerContent">
+                        <img src="~/img/home/offer-3.jpg" alt="محصولات مراقبتی اوریفلیم در زیبایی لیلی">
+                        <div class="offerMasking">
+                            <div class="offerTitle"><h4><a href="">Nail Care</a></h4></div>
+                        </div>
+                        <div class="offerPrice"><h5>$-</h5></div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <div class="offerContent">
+                        <img src="~/img/home/offer-4.jpg" alt="پرفیوم اوریفلیم در زیبایی لیلی">
+                        <div class="offerMasking">
+                            <div class="offerTitle"><h4><a href="javascript:void(0);">Possess women</a></h4></div>
+                        </div>
+                        <div class="offerPrice"><h5>$-</h5></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT SECTION -->
+    <section class="clearfix productSection">
+        <div class="container">
+            <div class="secotionTitle">
+                <h2><span>Natural </span>برگرفته از طبیعت</h2>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="productSlider" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#productSlider" data-slide-to="0" class="active"></li>
+                            <li data-target="#productSlider" data-slide-to="1"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="productImage">
+                                            <img src="~/img/home/home-product.jpg" alt="محصولات اوریفلیم در زیبایی لیلی" class="img-responsive">
+                                            @*<a href="javascript:void(0);"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>*@
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="productInfo">
+                                            <h3>پرفیوم های اوریفلیم</h3>
+                                            <h4>100% گیاهی</h4>
+                                            <ul class="list-inline rating">
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                            </ul>
+                                            <p style="text-align:justify">
+                                                نقاط کلیدی رو پوست بدن وجود دارد که اگر عطر زنانه یا مردانه خود را مستقیم به آن نواحی اسپری کنید، بوی عطر بسیار موثرتر خواهد بود. این نقاط روی سینه، گردن و داخل مچ دست هستند. پوست هر کس دارای ویژگی‌های هورمونی و شیمیایی مخصوص خود است که بر رایحه نهایی عطر تاثیر بسیار زیادی می‌گذارد. این کار اجازه می‌دهد تا عطر با رایحه طبیعی بدن شما تلفیق شود و رایحه نهایی عطر را بسازد. باخیال راحت عطر را بر روی پوست خود به جای لباستان اسپری کنید چرا که عطرهای اوریفلیم کاملا گیاهی بوده و ایجاد حساسیت، سردرد و سرطان نمیکند.
+                                            </p>
+                                            @*<a href="javascript:void(0);" class="btn btn-primary first-btn">read more</a>*@
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="productImage">
+                                            <img src="~/img/home/home-product-2.jpg" alt="بهترین های اوریفلیم در زیبایی لیلی" class="img-responsive">
+                                            @*<a href="javascript:void(0);"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>*@
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="productInfo">
+                                            <h3>محصولات ضدپیری</h3>
+                                            <h4>دارای اکولاژن و لیفتینگ</h4>
+                                            <ul class="list-inline rating">
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            </ul>
+                                            <p style="text-align:justify">
+                                                بهره گیری از تکنولوژی جنستئین سویا که منبع عظیم استروژن گیاهیست و خواص آنتی اکسیدانی بسیار قوی دارد.
+                                                حاوی عصاره بارهنگ، اسید هیالورونیک و ...
+                                                افزایش کشش پوست و تحریک عمیق کلاژن سازی و در نتیجه کاهش چین و چروک عمیق پوست.
+                                                رفع معایب پوستی اعم از لک های کهنسالی و اگزماهای دوره ای.
+                                                روشن و شفاف ساختن پوست.
+                                                آبرسانی کافی به پوست.
+                                                در 4 رده سنی +25 سال، +35 سال، +40 سال و +50 سال.
+                                                قویترین ست مراقبتی اوریـفلیم برای افراد بالای 50 سال است.
+                                            </p>
+                                            @*<a href="javascript:void(0);" class="btn btn-primary first-btn">read more</a>*@
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="productImage">
+                                            <img src="~/img/home/home-product-3.jpg" alt="بهترین های اوریفلیم در زیبایی لیلی" class="img-responsive">
+                                            <a href="javascript:void(0);"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="productInfo">
+                                            <h3>محصولات آقایان</h3>
+                                            <h4>آبرسان و محافظ پوست</h4>
+                                            <ul class="list-inline rating">
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            </ul>
+                                            <p>محصولات ویژه آقایان، بسیار موثر در شادابی و بهبود آسیب های پوستی</p>
+                                            @*<a href="javascript:void(0);" class="btn btn-primary first-btn">read more</a>*@
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#productSlider" role="button" data-slide="prev">
+                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#productSlider" role="button" data-slide="next">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEW SECTION -->
+    <section class="clearfix reviewSection patternbg">
+        <div class="container">
+            <div class="secotionTitle">
+                <h2><span>Testimonials </span>نظر مشتری ها</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="col-sm-9 col-sm-offset-3 col-xs-12 reviewInner">
+                            <div class="reviewImage hidden-xs">
+                                <img src="~/img/home/testimonial-1.jpg" alt="نظر مشتری زیبایی لیلی درباره اوریفلیم" class="img-responsive">
+                            </div>
+                            <div class="reviewInfo">
+                                <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                <p>ریمل مثل همیشه عالی بود، مخصوصا فرچه جدید و منحصر به فردش، من هم از کیفیت محصولاتتون راضی هستم و هم از گیاهی بودنشون، عطرو کادو دادیم به پدر مهربونمون، برخلاف عطرهای موجود در بازار اصلا ایجاد سردرد و ناراحتی نکرد، ممنون از وقتی که میزارین و خوش قولیتون</p>
+                                <h3>دانا، مشتری گلمون</h3>
+                                <h4> گروه زیبایی لیلی </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="col-sm-9 col-sm-offset-3 col-xs-12 reviewInner">
+                            <div class="reviewImage hidden-xs">
+                                <img src="~/img/home/testimonial-2.jpg" alt="نظر مشتری زیبایی لیلی درباره اوریفلیم" class="img-responsive">
+                            </div>
+                            <div class="reviewInfo">
+                                <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                <p>جنس چرم کیف عالیه، خیلی سبکه و فوق العاده خوش طرح و خوش دوخت، مداد چشم هم عالی بود خیلی راحت باهاش خط چشم میکشم، نه تنها مژه هام نمیریزه بله احساس میکنم تقویت هم میشه، با کیفیت عالی محصولاتتون در کنار قیمت مناسبتون و خوش قولیتون منو مشتری دایم خودتون کردین</p>
+                                <h3>فاطیما عزیز، مشتری گلمون</h3>
+                                <h4> گروه زیبایی لیلی </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- HOME GALLERY SECTION -->
+    <section>
+        <div class="clearfix homeGalleryTitle">
+            <div class="container">
+                <div class="secotionTitle">
+                    <h2><span>Explore </span>عکس محصولات</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid clearfix homeGallery">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="filter-container isotopeFilters">
+                        <ul class="list-inline filter">
+                            <li class="active"><a href="javascript:void(0);" data-filter="*">تمام موارد</a></li>
+                            <li><a href="javascript:void(0);" data-filter=".hair">مراقبتی مو</a></li>
+                            <li><a href="javascript:void(0);" data-filter=".makeup">آرایشی</a></li>
+                            <li><a href="javascript:void(0);" data-filter=".perfume">عطر و پرفیوم</a></li>
+                            <li><a href="javascript:void(0);" data-filter=".moraghebati">مراقبتی</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row isotopeContainer" id="container">
+                <div class="col-sm-3 isotopeSelector makeup">
+                    <div class="card">
+                        <div class="card-img">
+                            <img class="img-full" src="~/img/home/gallery-1.jpg" alt="آلبوم محصولات اوریفلیم در زیبایی لیلی">
+                            <div class="overlay-content">
+                                <a href="~/img/home/gallery-1.jpg" data-fancybox="images">
+                                    <h5><i class="fa fa-plus" aria-hidden="true"></i> <br>Skin Care</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 isotopeSelector perfume">
+                    <div class="card">
+                        <div class="card-img">
+                            <img class="img-full" src="~/img/home/gallery-2.jpg" alt="آلبوم محصولات اوریفلیم در زیبایی لیلی">
+                            <div class="overlay-content">
+                                <a href="~/img/home/gallery-2.jpg" data-fancybox="images">
+                                    <h5><i class="fa fa-plus" aria-hidden="true"></i> <br>Skin Care</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 isotopeSelector perfume">
+                    <div class="card">
+                        <div class="card-img">
+                            <img class="img-full" src="~/img/home/gallery-3.jpg" alt="آلبوم محصولات اوریفلیم در زیبایی لیلی">
+                            <div class="overlay-content">
+                                <a href="~/img/home/gallery-3.jpg" data-fancybox="images">
+                                    <h5><i class="fa fa-plus" aria-hidden="true"></i> <br>Skin Care</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 isotopeSelector hair">
+                    <div class="card">
+                        <div class="card-img">
+                            <img class="img-full" src="~/img/home/gallery-4.jpg" alt="آلبوم محصولات اوریفلیم در زیبایی لیلی">
+                            <div class="overlay-content">
+                                <a href="~/img/home/gallery-4.jpg" data-fancybox="images">
+                                    <h5><i class="fa fa-plus" aria-hidden="true"></i> <br>Skin Care</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 isotopeSelector moraghebati">
+                    <div class="card">
+                        <div class="card-img">
+                            <img class="img-full" src="~/img/home/gallery-5.jpg" alt="آلبوم محصولات اوریفلیم در زیبایی لیلی">
+                            <div class="overlay-content">
+                                <a href="~/img/home/gallery-5.jpg" data-fancybox="images">
+                                    <h5><i class="fa fa-plus" aria-hidden="true"></i> <br>Skin Care</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 isotopeSelector moraghebati">
+                    <div class="card">
+                        <div class="card-img">
+                            <img class="img-full" src="~/img/home/gallery-6.jpg" alt="آلبوم محصولات اوریفلیم در زیبایی لیلی">
+                            <div class="overlay-content">
+                                <a href="~/img/home/gallery-6.jpg" data-fancybox="images">
+                                    <h5><i class="fa fa-plus" aria-hidden="true"></i> <br>Skin Care</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 isotopeSelector perfume">
+                    <div class="card">
+                        <div class="card-img">
+                            <img class="img-full" src="~/img/home/gallery-8.jpg" alt="آلبوم محصولات اوریفلیم در زیبایی لیلی">
+                            <div class="overlay-content">
+                                <a href="~/img/home/gallery-8.jpg" data-fancybox="images">
+                                    <h5><i class="fa fa-plus" aria-hidden="true"></i> <br>Skin Care</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 isotopeSelector hair">
+                    <div class="card">
+                        <div class="card-img">
+                            <img class="img-full" src="~/img/home/gallery-10.jpg" alt="آلبوم محصولات اوریفلیم در زیبایی لیلی">
+                            <div class="overlay-content">
+                                <a href="~/img/home/gallery-10.jpg" data-fancybox="images">
+                                    <h5><i class="fa fa-plus" aria-hidden="true"></i> <br>Skin Care</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CALL TO ACTION SECTION -->
+    <section class="clearfix callAction">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 col-sm-offset-1 col-xs-12">
+                    <div class="callInfo">
+                        <p>با محصولات گروه زیبایی لیلی خرید را به تجربه خوب تبدیل می کنیم، محنصر به فرد باش! سلامت باش! خوشحال باش !</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <a href="pricing.html" class="btn btn-primary first-btn callBtn">مشاهده تخفیفات</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- PARTNER LOGO SECTION -->
+    <section class="clearfix brandArea patternbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="owl-carousel partnersLogoSlider">
+                        <div class="slide">
+                            <div class="partnersLogo clearfix">
+                                <img src="~/img/home/brand-1.png" alt="لوگو اوریفلیم در زیبایی لیلی">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="partnersLogo clearfix">
+                                <img src="~/img/home/brand-2.png" alt="لوگو اوریفلیم">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="partnersLogo clearfix">
+                                <img src="~/img/home/brand-3.png" alt="لوگو جوردانی اوریفلیم">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="partnersLogo clearfix">
+                                <img src="~/img/home/brand-4.png" alt="لوگو دوان اوریفلیم">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

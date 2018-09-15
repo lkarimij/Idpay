@@ -1,0 +1,71 @@
+﻿@model LeiliBeauty.Models.Order
+@{
+    ViewBag.Title = "سبد خرید";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts
+{
+    <script>
+        jQuery(document).ready(function ($) {
+            $('#add-OrderDetails').on('click', function () {
+                jQuery.get('/Order/AddOrderDetail').done(function (html) {
+                    $('#orderDeatil-list').append(html);
+                });
+            });
+        });
+    </script>
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <section class="clearfix orderArea">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-8 col-xs-12">
+
+                    <div class="panel panel-default cartInfo">
+                        <div class="panel-heading patternbg">سفارش های شما</div>
+                        <div class="panel-body tableArea">
+
+
+                            <div>
+                                <table class="table">
+                                    <tbody id="orderDeatil-list">
+                                        @Html.EditorForMany(x => x.OrderDetails, x => x.Index)
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.EditorFor(x => x)
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+}
+
+@*@using (Html.BeginForm())
+    {
+        <h2>Create</h2>
+
+        <h3>Building</h3>
+        @Html.EditorFor(x => x)
+
+        <h3>Rooms</h3>
+        <div id="orderDeatil-list">
+            @Html.EditorForMany(x => x.OrderDetails, x => x.Index)
+        </div>
+
+        <input type="submit" />
+        <input type="button" id="add-OrderDetails" value="Add" />
+    }*@

@@ -1,0 +1,75 @@
+﻿@model LeiliBeauty.Models.OrderDetail
+
+@*<tr>
+        <td>
+            @Html.HiddenFor(m => m.ProductCode)
+            @Html.HiddenFor(m => m.ImageUrl)
+            @Html.HiddenFor(m => m.Price)
+            @Html.HiddenFor(m => m.Name)
+            @Html.HiddenFor(m => m.MaxCount)
+            <a href='@Url.Action("Detail", "Product", new { id = Model.ProductCode, InStore = true })' class="cartImage">
+                <img src='@Url.Content(Model.ImageUrl)' alt="@Model.Name" class="cartImage" />
+            </a>
+
+        </td>
+        <td>
+            <a href="@Url.Action("Detail", "Product", new { id = Model.ProductCode, InStore = true })" style="font-size:small;font-weight:100">
+                @Html.DisplayFor(m => m.Name)
+            </a>
+            <br>
+            <span>
+                تعداد:
+                @Html.EditorFor(model => model.Count, new { htmlAttributes = new { @type = "number", @min = "1", @step = "1", @value = "0" } })
+                @Html.ValidationMessageFor(m => m.Count, "", new { @class = "text-danger" })
+            </span>
+        </td>
+        <td><span class="price">@Html.DisplayFor(m => m.Price) تومان</span></td>
+        <td>
+            <input type="submit" class="close" name="submitButton" value="حذف (@Model.ProductCode)" style="font-size:small;padding:0px 5px 0px 5px" />
+        </td>
+    </tr>*@
+
+@Html.HiddenFor(m => m.ProductCode)
+@Html.HiddenFor(m => m.ImageUrl)
+@Html.HiddenFor(m => m.Price)
+@Html.HiddenFor(m => m.Name)
+@Html.HiddenFor(m => m.MaxCount)
+<div class="col-sm-12 col-xs-12 col-md-12" style="margin:10px 0 10px 0">
+    <div class="col-sm-2 col-xs-12 col-md-2" style="margin:2px 0 2px 0">
+        <a href='@Url.Action("Detail", "Product", new { id =Utils.GenerateSlug( Model.ProductCode,Model.Name), InStore = true })'>
+            <img src='@Url.Content(Model.ImageUrl)' alt="@Model.Name" style="max-width:100%;max-height:100%;padding:0px;margin:0px" />
+        </a>
+    </div>
+    <div class="col-sm-10 col-xs-12 col-md-10" style="margin:2px 0 2px 0">
+        <div>
+            <a href="@Url.Action("Detail", "Product", new { id = Utils.GenerateSlug( Model.ProductCode,Model.Name), InStore = true })" style="font-size:small;font-weight:100">
+                @Html.DisplayFor(m => m.Name)
+            </a>
+        </div>
+        @if (Model.ProductCode != 10000)
+        {
+            <div style="margin:2px 0 2px 0">
+                <span>
+
+                    تعداد:
+                    @Html.EditorFor(model => model.Count, new { htmlAttributes = new { @type = "number", @min = "1", @step = "1", @value = "0", style = "width:35px" } })
+                    @Html.ValidationMessageFor(m => m.Count, "", new { @class = "text-danger" })
+
+                </span>
+            </div>
+        }
+        else
+        {
+            @Html.HiddenFor(m => m.Count)
+        }
+        <div style="margin:2px 0 2px 0">
+            <span class="price"> @Html.DisplayFor(m => m.Price) تومان </span>
+            @if (Model.ProductCode != 10000)
+            {
+                <input type="submit" class="close" name="submitButton" value="حذف (@Model.ProductCode)" style="font-size:small;padding:5px 5px 5px 5px" />
+            }
+            <hr />
+        </div>
+    </div>
+
+</div>

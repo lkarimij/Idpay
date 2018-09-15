@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+
+    <loc>http://www.LeiliBeauty.com/Cooperation</loc>
+
+    <lastmod>2018-05-30</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+    <priority>1</priority>
+
+  </url>
+  
+  <url>
+
+    <loc>http://www.LeiliBeauty.com/CooperationContact</loc>
+
+    <lastmod>2018-05-30</lastmod>
+
+    <changefreq>never</changefreq>
+
+    <priority>0.5</priority>
+
+  </url>
+
+  
+  <url>
+
+    <loc>http://www.LeiliBeauty.com/Home</loc>
+
+    <lastmod>2018-06-03</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>0.9</priority>
+
+  </url>
+
+  <url>
+
+    <loc>http://www.LeiliBeauty.com/Catalog</loc>
+
+    <lastmod>2018-06-02</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>0.8</priority>
+
+  </url>
+  
+  <url>
+
+    <loc>http://www.LeiliBeauty.com/Product</loc>
+
+    <lastmod>2018-06-02</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>0.8</priority>
+
+  </url>
+  
+   <url>
+
+    <loc>http://www.LeiliBeauty.com/Product</loc>
+
+    <lastmod>2018-06-02</lastmod>
+
+    <changefreq>always</changefreq>
+
+    <priority>0.7</priority>
+
+  </url>
+
+
+
+</urlset>

@@ -1,0 +1,515 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - LeiliBeauty</title>
+    @*@Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")*@
+    @*@Styles.Render("~/Content/css")*@
+    <link href="~/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/plugins/bootstrap-rtl/dist/css/bootstrap-rtl.min.css" rel="stylesheet" />
+    <link href="~/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/plugins/selectbox/select_option1.css" rel="stylesheet" />
+    <link href="~/plugins/owl-carousel/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/plugins/fancybox/jquery.fancybox.min.css" rel="stylesheet" />
+    <link href="~/plugins/isotope/isotope.min.css" rel="stylesheet" />
+    <link href="~/plugins/datepicker/datepicker.min.css" rel="stylesheet" />
+    <link href="~/plugins/bootstrapthumbnail/bootstrap-thumbnail.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/rtl.css" rel="stylesheet" />
+    <link href="~/css/default.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff" rel="stylesheet">
+
+    <link href="~/img/favicon.png" rel="shortcut icon">
+
+    <style>
+        /* Paste this css to your style sheet file or under head tag */
+        /* This only works with JavaScript,
+        if it's not present, don't show loader */
+        .no-js #loader {
+            display: none;
+        }
+
+        .js #loader {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(~/plugins/simple-pre-loader/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
+        }
+    </style>
+    @RenderSection("Scripts", required: false)
+</head>
+
+<body class="body-wrapper static rtl">
+    @*<div class="se-pre-con"></div>*@
+    <div class="main-wrapper">
+        <!-- HEADER -->
+        <header id="pageTop" class="header">
+
+            <!-- TOP INFO BAR -->
+            <div class="top-info-bar">
+                <div class="container">
+                    <div class="top-bar-right">
+                        <ul class="list-inline" dir="ltr">
+                            <li><span><i class="fa fa-phone" aria-hidden="true"></i> 09216867207 </span></li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i> Admin@leiliBeauty.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NAVBAR -->
+            <nav id="menuBar" class="navbar navbar-default lightHeader">
+                <div class="container">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="~/img/logo.png" alt="لگو گروه زیبایی لیلی"></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active">
+                                @Html.ActionLink("صفحه اصلی", "Index", "Home")
+                            </li>
+
+                            <li class="dropdown singleDrop">
+                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">نماینده فروش استان ها</a>
+                                <ul class="dropdown-menu dropdown-menu-left">
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">استان تهران</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <div class="ini uk-float-right">
+                                                    <a href="http://instagram.com/Leili.BUT" target="_blank" title="اینستاگرام تهران">
+                                                        <svg class="instag" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;" xml:space="preserve" width="31px" height="31px">
+                                                        <path class="icon1" d="M168.496,111.025h15.219v65.454c0,3.996-3.24,7.236-7.236,7.236H66.188c-3.996,0-7.236-3.24-7.236-7.236v-65.454h15.219  c-0.723,3.323-1.115,6.769-1.115,10.308c0,26.663,21.614,48.277,48.277,48.277c26.663,0,48.277-21.614,48.277-48.277  C169.61,117.794,169.219,114.347,168.496,111.025z M121.333,153.852c17.959,0,32.518-14.559,32.518-32.518  c0-17.959-14.559-32.518-32.518-32.518c-17.959,0-32.518,14.559-32.518,32.518C88.815,139.293,103.374,153.852,121.333,153.852z   M160.293,87.937h12.385c3.631,0,6.575-2.944,6.575-6.575V68.978c0-3.631-2.943-6.574-6.575-6.574h-12.385  c-3.631,0-6.574,2.943-6.574,6.574v12.385C153.719,84.994,156.662,87.937,160.293,87.937z M242.667,0v242.667H0V0H242.667z   M198.623,63.539c0-10.766-8.728-19.494-19.494-19.494H63.539c-10.766,0-19.494,8.728-19.494,19.494v115.59  c0,10.766,8.728,19.494,19.494,19.494h115.59c10.766,0,19.494-8.728,19.494-19.494V63.539z" fill="#bebebe"></path>
+                                                </svg>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="telegram uk-float-right" style="margin-left:3px">
+                                                    <a href="https://t.me/LeiliCosmetics" target="_blank" title="تلگرام تهران">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;" xml:space="preserve" width="31px" height="31px">
+                                                        <path class="icon2" d="M162.443,86.061l-54.044,50.235c-1.899,1.765-3.126,4.135-3.473,6.704l-1.839,13.641c-0.245,1.82-2.806,2.003-3.308,0.237  l-7.08-24.875c-0.808-2.839,0.37-5.87,2.883-7.418l65.484-40.334C162.241,83.528,163.454,85.121,162.443,86.061z M242.667,0v242.667  H0V0H242.667z M188.665,58.301l-137.51,53.047c-3.39,1.308-3.364,6.114,0.04,7.385L84.7,131.24l12.97,41.708  c0.831,2.671,4.099,3.656,6.267,1.888l18.677-15.226c1.958-1.596,4.744-1.674,6.788-0.19l33.689,24.459  c2.319,1.684,5.604,0.414,6.187-2.392l24.675-118.699C194.59,59.727,191.583,57.175,188.665,58.301z" fill="#bebebe"></path>
+                                                </svg>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                09011905276
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">استان کردستان</a>
+                                        <ul class="dropdown-menu">
+                                            @*<li>
+                                            <div class="ini uk-float-right">
+                                            <a href="http://instagram.com/markazi_oriflame" target="_blank" title="اینستاگرام مرکزی">
+                                            <svg class="instag" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;" xml:space="preserve" width="31px" height="31px">
+                                            <path class="icon1" d="M168.496,111.025h15.219v65.454c0,3.996-3.24,7.236-7.236,7.236H66.188c-3.996,0-7.236-3.24-7.236-7.236v-65.454h15.219  c-0.723,3.323-1.115,6.769-1.115,10.308c0,26.663,21.614,48.277,48.277,48.277c26.663,0,48.277-21.614,48.277-48.277  C169.61,117.794,169.219,114.347,168.496,111.025z M121.333,153.852c17.959,0,32.518-14.559,32.518-32.518  c0-17.959-14.559-32.518-32.518-32.518c-17.959,0-32.518,14.559-32.518,32.518C88.815,139.293,103.374,153.852,121.333,153.852z   M160.293,87.937h12.385c3.631,0,6.575-2.944,6.575-6.575V68.978c0-3.631-2.943-6.574-6.575-6.574h-12.385  c-3.631,0-6.574,2.943-6.574,6.574v12.385C153.719,84.994,156.662,87.937,160.293,87.937z M242.667,0v242.667H0V0H242.667z   M198.623,63.539c0-10.766-8.728-19.494-19.494-19.494H63.539c-10.766,0-19.494,8.728-19.494,19.494v115.59  c0,10.766,8.728,19.494,19.494,19.494h115.59c10.766,0,19.494-8.728,19.494-19.494V63.539z" fill="#bebebe"></path>
+                                            </svg>
+                                            </a>
+                                            </div>
+                                            </li>*@
+                                            <li>
+                                                <div class="telegram uk-float-right" style="margin-left:3px">
+                                                    <a href="https://t.me/E56100" target="_blank" title="تلگرام مرکزی">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;" xml:space="preserve" width="31px" height="31px">
+                                                        <path class="icon2" d="M162.443,86.061l-54.044,50.235c-1.899,1.765-3.126,4.135-3.473,6.704l-1.839,13.641c-0.245,1.82-2.806,2.003-3.308,0.237  l-7.08-24.875c-0.808-2.839,0.37-5.87,2.883-7.418l65.484-40.334C162.241,83.528,163.454,85.121,162.443,86.061z M242.667,0v242.667  H0V0H242.667z M188.665,58.301l-137.51,53.047c-3.39,1.308-3.364,6.114,0.04,7.385L84.7,131.24l12.97,41.708  c0.831,2.671,4.099,3.656,6.267,1.888l18.677-15.226c1.958-1.596,4.744-1.674,6.788-0.19l33.689,24.459  c2.319,1.684,5.604,0.414,6.187-2.392l24.675-118.699C194.59,59.727,191.583,57.175,188.665,58.301z" fill="#bebebe"></path>
+                                                </svg>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                09368458862
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">استان مرکزی</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <div class="ini uk-float-right">
+                                                    <a href="http://instagram.com/markazi_oriflame" target="_blank" title="اینستاگرام مرکزی">
+                                                        <svg class="instag" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;" xml:space="preserve" width="31px" height="31px">
+                                                        <path class="icon1" d="M168.496,111.025h15.219v65.454c0,3.996-3.24,7.236-7.236,7.236H66.188c-3.996,0-7.236-3.24-7.236-7.236v-65.454h15.219  c-0.723,3.323-1.115,6.769-1.115,10.308c0,26.663,21.614,48.277,48.277,48.277c26.663,0,48.277-21.614,48.277-48.277  C169.61,117.794,169.219,114.347,168.496,111.025z M121.333,153.852c17.959,0,32.518-14.559,32.518-32.518  c0-17.959-14.559-32.518-32.518-32.518c-17.959,0-32.518,14.559-32.518,32.518C88.815,139.293,103.374,153.852,121.333,153.852z   M160.293,87.937h12.385c3.631,0,6.575-2.944,6.575-6.575V68.978c0-3.631-2.943-6.574-6.575-6.574h-12.385  c-3.631,0-6.574,2.943-6.574,6.574v12.385C153.719,84.994,156.662,87.937,160.293,87.937z M242.667,0v242.667H0V0H242.667z   M198.623,63.539c0-10.766-8.728-19.494-19.494-19.494H63.539c-10.766,0-19.494,8.728-19.494,19.494v115.59  c0,10.766,8.728,19.494,19.494,19.494h115.59c10.766,0,19.494-8.728,19.494-19.494V63.539z" fill="#bebebe"></path>
+                                                </svg>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="telegram uk-float-right" style="margin-left:3px">
+                                                    <a href="https://t.me/Oriflame_markazi" target="_blank" title="تلگرام مرکزی">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;" xml:space="preserve" width="31px" height="31px">
+                                                        <path class="icon2" d="M162.443,86.061l-54.044,50.235c-1.899,1.765-3.126,4.135-3.473,6.704l-1.839,13.641c-0.245,1.82-2.806,2.003-3.308,0.237  l-7.08-24.875c-0.808-2.839,0.37-5.87,2.883-7.418l65.484-40.334C162.241,83.528,163.454,85.121,162.443,86.061z M242.667,0v242.667  H0V0H242.667z M188.665,58.301l-137.51,53.047c-3.39,1.308-3.364,6.114,0.04,7.385L84.7,131.24l12.97,41.708  c0.831,2.671,4.099,3.656,6.267,1.888l18.677-15.226c1.958-1.596,4.744-1.674,6.788-0.19l33.689,24.459  c2.319,1.684,5.604,0.414,6.187-2.392l24.675-118.699C194.59,59.727,191.583,57.175,188.665,58.301z" fill="#bebebe"></path>
+                                                </svg>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                09368458862
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">استان گیلان</a>
+                                        <ul class="dropdown-menu">
+                                            @*<li>
+                                            <div class="ini uk-float-right">
+                                            <a href="http://instagram.com/markazi_oriflame" target="_blank" title="اینستاگرام مرکزی">
+                                            <svg class="instag" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;" xml:space="preserve" width="31px" height="31px">
+                                            <path class="icon1" d="M168.496,111.025h15.219v65.454c0,3.996-3.24,7.236-7.236,7.236H66.188c-3.996,0-7.236-3.24-7.236-7.236v-65.454h15.219  c-0.723,3.323-1.115,6.769-1.115,10.308c0,26.663,21.614,48.277,48.277,48.277c26.663,0,48.277-21.614,48.277-48.277  C169.61,117.794,169.219,114.347,168.496,111.025z M121.333,153.852c17.959,0,32.518-14.559,32.518-32.518  c0-17.959-14.559-32.518-32.518-32.518c-17.959,0-32.518,14.559-32.518,32.518C88.815,139.293,103.374,153.852,121.333,153.852z   M160.293,87.937h12.385c3.631,0,6.575-2.944,6.575-6.575V68.978c0-3.631-2.943-6.574-6.575-6.574h-12.385  c-3.631,0-6.574,2.943-6.574,6.574v12.385C153.719,84.994,156.662,87.937,160.293,87.937z M242.667,0v242.667H0V0H242.667z   M198.623,63.539c0-10.766-8.728-19.494-19.494-19.494H63.539c-10.766,0-19.494,8.728-19.494,19.494v115.59  c0,10.766,8.728,19.494,19.494,19.494h115.59c10.766,0,19.494-8.728,19.494-19.494V63.539z" fill="#bebebe"></path>
+                                            </svg>
+                                            </a>
+                                            </div>
+                                            </li>*@
+                                            <li>
+                                                <div class="telegram uk-float-right" style="margin-left:3px">
+                                                    <a href="https://t.me/Gilan_oriflame45" target="_blank" title="تلگرام گیلان">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;" xml:space="preserve" width="31px" height="31px">
+                                                        <path class="icon2" d="M162.443,86.061l-54.044,50.235c-1.899,1.765-3.126,4.135-3.473,6.704l-1.839,13.641c-0.245,1.82-2.806,2.003-3.308,0.237  l-7.08-24.875c-0.808-2.839,0.37-5.87,2.883-7.418l65.484-40.334C162.241,83.528,163.454,85.121,162.443,86.061z M242.667,0v242.667  H0V0H242.667z M188.665,58.301l-137.51,53.047c-3.39,1.308-3.364,6.114,0.04,7.385L84.7,131.24l12.97,41.708  c0.831,2.671,4.099,3.656,6.267,1.888l18.677-15.226c1.958-1.596,4.744-1.674,6.788-0.19l33.689,24.459  c2.319,1.684,5.604,0.414,6.187-2.392l24.675-118.699C194.59,59.727,191.583,57.175,188.665,58.301z" fill="#bebebe"></path>
+                                                </svg>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                09359162660
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown singleDrop">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">کسب درآمد از اوریفلیم</a>
+                                <ul class="dropdown-menu dropdown-menu-left">
+                                    <li>@Html.ActionLink("به ما بپیوندید", "Cooperation", "Home")</li>
+                                    <li>@Html.ActionLink("اطلاعات تماس", "CooperationContact", "Home")</li>
+                                </ul>
+                            </li>
+                            <li>
+                                @Html.ActionLink("ورود مشاوران", "Login", "Account")
+                            </li>
+                            @*<li class="dropdown singleDrop">
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> ثبت سفارش</a>
+                            <ul class="dropdown-menu dropdown-menu-left ">
+                            <li>@Html.ActionLink("نحوه ثبت سفارش", "HelpOrder", "Home")</li>
+                            <li>
+                            <div class="ini uk-float-right">
+                            <a href="http://instagram.com/Leili.BUT" target="_blank" title="اینستاگرام">
+                            <svg class="instag" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;" xml:space="preserve" width="31px" height="31px">
+                            <path class="icon1" d="M168.496,111.025h15.219v65.454c0,3.996-3.24,7.236-7.236,7.236H66.188c-3.996,0-7.236-3.24-7.236-7.236v-65.454h15.219  c-0.723,3.323-1.115,6.769-1.115,10.308c0,26.663,21.614,48.277,48.277,48.277c26.663,0,48.277-21.614,48.277-48.277  C169.61,117.794,169.219,114.347,168.496,111.025z M121.333,153.852c17.959,0,32.518-14.559,32.518-32.518  c0-17.959-14.559-32.518-32.518-32.518c-17.959,0-32.518,14.559-32.518,32.518C88.815,139.293,103.374,153.852,121.333,153.852z   M160.293,87.937h12.385c3.631,0,6.575-2.944,6.575-6.575V68.978c0-3.631-2.943-6.574-6.575-6.574h-12.385  c-3.631,0-6.574,2.943-6.574,6.574v12.385C153.719,84.994,156.662,87.937,160.293,87.937z M242.667,0v242.667H0V0H242.667z   M198.623,63.539c0-10.766-8.728-19.494-19.494-19.494H63.539c-10.766,0-19.494,8.728-19.494,19.494v115.59  c0,10.766,8.728,19.494,19.494,19.494h115.59c10.766,0,19.494-8.728,19.494-19.494V63.539z" fill="#bebebe"></path>
+                            </svg>
+                            </a>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="telegram uk-float-right" style="margin-left:3px">
+                            <a href="https://t.me/LeiliCosmetics" target="_blank" title="تلگرام">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;" xml:space="preserve" width="31px" height="31px">
+                            <path class="icon2" d="M162.443,86.061l-54.044,50.235c-1.899,1.765-3.126,4.135-3.473,6.704l-1.839,13.641c-0.245,1.82-2.806,2.003-3.308,0.237  l-7.08-24.875c-0.808-2.839,0.37-5.87,2.883-7.418l65.484-40.334C162.241,83.528,163.454,85.121,162.443,86.061z M242.667,0v242.667  H0V0H242.667z M188.665,58.301l-137.51,53.047c-3.39,1.308-3.364,6.114,0.04,7.385L84.7,131.24l12.97,41.708  c0.831,2.671,4.099,3.656,6.267,1.888l18.677-15.226c1.958-1.596,4.744-1.674,6.788-0.19l33.689,24.459  c2.319,1.684,5.604,0.414,6.187-2.392l24.675-118.699C194.59,59.727,191.583,57.175,188.665,58.301z" fill="#bebebe"></path>
+                            </svg>
+                            </a>
+                            </div>
+                            </li>
+                            </ul>
+                            </li>
+                            <li class="dropdown megaDropMenu">
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">تخفیف های کاتالوگ</a>
+                            <ul class="row dropdown-menu">
+                            <li class="col-sm-3 col-xs-12">
+                            <ul class="list-unstyled">
+                            <li><h3> @Html.ActionLink("تمامی محصولات", "Index", "Catalog", null, null)</h3></li>
+                            <li>@Html.ActionLink("محصولات آرایشی در کاتالوگ", "Index", "Catalog", new { Type = 5 }, null)</li>
+                            <li>@Html.ActionLink("محصولات بهداشتی در کاتالوگ", "Index", "Catalog", new { Type = 11 }, null)</li>
+                            <li>@Html.ActionLink("عطرها و ادکلن ها در کاتالوگ", "Index", "Catalog", new { Type = 12 }, null)</li>
+                            <li>@Html.ActionLink("محصولات مو  در کاتالوگ", "Index", "Catalog", new { Type = 1 }, null)</li>
+                            <li>@Html.ActionLink("محصولات مراقبتی صورت  در کاتالوگ", "Index", "Catalog", new { Type = 2 }, null)</li>
+                            </ul>
+                            </li>
+                            <li class="col-sm-3 col-xs-12">
+                            <ul class="list-unstyled">
+                            <li>@Html.ActionLink("محصولات مراقبتی دست در کاتالوگ", "Index", "Catalog", new { Type = 3 }, null)</li>
+                            <li>@Html.ActionLink("محصولات مراقبتی پا در کاتالوگ", "Index", "Catalog", new { Type = 4 }, null)</li>
+                            <li>@Html.ActionLink("محصولات ویژه آقایان در کاتالوگ", "Index", "Catalog", new { Type = 6 }, null)</li>
+                            <li>@Html.ActionLink("کیف ها در کاتالوگ", "Index", "Catalog", new { Type = 8 }, null)</li>
+                            <li>@Html.ActionLink("زیورآلات در کاتالوگ", "Index", "Catalog", new { Type = 9 }, null)</li>
+
+                            </ul>
+                            </li>
+                            <li class="col-sm-3 col-xs-12">
+                            <ul class="list-unstyled">
+                            <li>@Html.ActionLink("محصولات ویژه کودکان در کاتالوگ", "Index", "Catalog", new { Type = 7 }, null)</li>
+                            <li>@Html.ActionLink("تقویت کننده های خوراکی در کاتالوگ", "Index", "Catalog", new { Type = 10 }, null)</li>
+                            <li><a href="~/CatalogPDF/18-08-english.pdf" target="_blank">دانلود فایل pdf کاتالوگ اصلی</a></li>
+                            <li></li>
+                            <li></li>
+                            </ul>
+                            </li>
+                            <li class="col-sm-3 col-xs-12 mega-img">
+                            <a href="javascript:void(0);"><img src="~/img/home/pricing-1.jpg" alt="Leili Beauty - زیبایی لیلی"></a>
+                            </li>
+                            </ul>
+                            </li>*@
+
+                            <li class="dropdown megaDropMenu">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">محصولات موجود</a>
+                                <ul class="row dropdown-menu">
+                                    <li class="col-sm-3 col-xs-12">
+                                        <ul class="list-unstyled">
+                                            <li><h3> @Html.ActionLink("تمامی محصولات موجود", "Index", "Product", null, null)</h3></li>
+                                            <li>@Html.ActionLink("موجودی محصولات آرایشی", "Index", "Product", new { Type = 5 }, null)</li>
+                                            <li>@Html.ActionLink("موجودی محصولات بهداشتی", "Index", "Product", new { Type = 11 }, null)</li>
+                                            <li>@Html.ActionLink("موجودی عطرها و ادکلن ها", "Index", "Product", new { Type = 12 }, null)</li>
+                                            <li>@Html.ActionLink("موجودی محصولات مو", "Index", "Product", new { Type = 1 }, null)</li>
+                                            <li>@Html.ActionLink("موجودی محصولات مراقبتی صورت", "Index", "Product", new { Type = 2 }, null)</li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3 col-xs-12">
+                                        <ul class="list-unstyled">
+                                            <li>@Html.ActionLink("موجودی محصولات مراقبتی دست", "Index", "Product", new { Type = 3 }, null)</li>
+                                            <li>@Html.ActionLink("موجودی محصولات مراقبتی پا", "Index", "Product", new { Type = 4 }, null)</li>
+                                            <li>@Html.ActionLink("موجودی محصولات ویژه آقایان", "Index", "Product", new { Type = 6 }, null)</li>
+                                            <li>@Html.ActionLink("موجودی کیف ها", "Index", "Product", new { Type = 8 }, null)</li>
+                                            <li>@Html.ActionLink("موجودی زیورآلات", "Index", "Product", new { Type = 9 }, null)</li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3 col-xs-12">
+                                        <ul class="list-unstyled">
+
+                                            <li>@Html.ActionLink("موجودی محصولات ویژه کودکان", "Index", "Product", new { Type = 7 }, null)</li>
+                                            <li>@Html.ActionLink("موجودی تقویت کننده های خوراکی", "Index", "Product", new { Type = 10 }, null)</li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3 col-xs-12 mega-img">
+                                        <a href="javascript:void(0);"><img src="~/img/home/pricing-1.jpg" alt="Leili Beauty - زیبایی لیلی"></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" title="جستجو" onclick="displayLoginBox()">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="row" id="searchDiv" style="display:none">
+                            <div class="col-md-10 col-sm-10 col-xs-9" style="padding:0px 0px 0px 0px">
+                                <input placeholder="متن مورد نطر برای جستجو را وارد نمایید" type="text" id="SearchText" class="form-control" alt="اوریفلیم لیلی موجودی" style="margin:0px 0px 0px 0px" />
+                            </div>
+                            <div class="col-md-2 col-sm-2 col-xs-3" style="padding:0px 0px 0px 0px">
+                                @Html.ActionLink("جستجو", "Index", "Product", null, new { onclick = "this.href += '?filter=' + document.getElementById('SearchText').value;", @class = "btn btn-primary btn-block", @alt = "اوریفلیم لیلی موجودی" })
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Cart button -->
+                    <div class="cart_btn">
+                        <a href="@Url.Action("Index", "Order", new { code = 0})" title="مشاهده سبد خرید">
+                            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                            <span class="badge">
+                                @(Utils.CurrentOrder==null ? 0 : Utils.CurrentOrder.OrderDetails.Count)
+                            </span>
+                        </a>
+                    </div>
+
+
+                </div>
+
+
+                <script>
+                    function displayLoginBox() {
+
+                        $("#searchDiv").toggle();
+                    }
+                    function myFunction() {
+                        if (document.getElementById("searchDiv").style.display = "none")
+                            document.getElementById("searchDiv").style.display = "block";
+                        else if (document.getElementById("searchDiv").style.display = "block")
+                            document.getElementById("searchDiv").style.display = "none";
+
+                    }
+                </script>
+            </nav>
+
+        </header>
+        <div class="body-wrapper static">
+            @RenderBody()
+            <hr />
+            <footer style="background-image: url(img/home/footer-bg.jpg);">
+                <!-- BACK TO TOP BUTTON -->
+                <a href="#pageTop" class="backToTop"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+                <!-- FOOTER INFO -->
+                @*<div class="clearfix footerInfo">
+                <div class="container">
+                <div class="row">
+                <div class="col-sm-3 col-xs-12">
+                <div class="footerText">
+                <img src="img/logo-footer.png" alt="لوگو زیبایی لیلی" class="img-responsive">
+                <br />
+                <p>رسالت گروه زیبایی لیلی بر آن است که محصولات آرایشی، بهداشتی و مراقبتی برند برتر دنیا را با قیمت مناسب به دست هموطنان گرامی برساند</p>
+                <p>محصولات این گروه کاملا گیاهی بوده و غنی شده با ویتامین های مغزی جهت بهبود کیفیت مو و پوست شما</p>
+                </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 paddingLeft">
+                <div class="footerInfoTitle">
+                <h4>لینک های مرتبط</h4>
+                </div>
+                <div class="useLink">
+                <ul class="list-unstyled">
+                <li><a href="https://www.linkedin.com/in/fatemeh-karimi-0905b162/"><i class="fa fa-angle-double-right" aria-hidden="true"></i>طراحی وب سایت</a></li>
+                <li><a href="javascript:void(0);"><i class="fa fa-angle-double-right" aria-hidden="true"></i>درباره گروه زیبایی لیلی</a></li>
+                <li><a href="javascript:void(0);"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Mobile</a></li>
+                <li><a href="javascript:void(0);"><i class="fa fa-angle-double-right" aria-hidden="true"></i>چرا گروه زیبایی لیلی؟</a></li>
+                <li><a href="javascript:void(0);"><i class="fa fa-angle-double-right" aria-hidden="true"></i>رسانه های اجتماعی</a></li>
+                </ul>
+                </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                <div class="footerInfoTitle">
+                <h4>عکس ها</h4>
+                </div>
+                <div class="footerGallery row">
+                <div class="col-xs-4">
+                <a href="javascript:void(0);" style="background-image: url(../../img/home/footer-gallery-1.jpg);"></a>
+                </div>
+                <div class="col-xs-4">
+                <a href="javascript:void(0);" style="background-image: url(../../img/home/footer-gallery-2.jpg);"></a>
+                </div>
+                <div class="col-xs-4">
+                <a href="javascript:void(0);" style="background-image: url(../../img/home/footer-gallery-3.jpg);"></a>
+                </div>
+                <div class="col-xs-4">
+                <a href="javascript:void(0);" style="background-image: url(../../img/home/footer-gallery-4.jpg);"></a>
+                </div>
+                <div class="col-xs-4">
+                <a href="javascript:void(0);" style="background-image: url(../../img/home/footer-gallery-5.jpg);"></a>
+                </div>
+                <div class="col-xs-4">
+                <a href="javascript:void(0);" style="background-image: url(../../img/home/footer-gallery-6.jpg);"></a>
+                </div>
+                </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                <div class="footerInfoTitle">
+                <h4>آخرین تخفیف ها و آخرین محصول ها</h4>
+                </div>
+                <div class="footerText">
+                <p>برای دریافت آخرین کاتالوگ با بهترین تخفیف ها عضو شوید</p>
+                <div class="input-group">
+                <input type="text" class="form-control" placeholder="Email address" aria-describedby="basic-addon21">
+                <button type="submit" class="input-group-addon" id="basic-addon21">ثبت نام</button>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>*@
+
+                <!-- COPY RIGHT -->
+                <div class="clearfix copyRight">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-5 col-sm-push-7 col-xs-12">
+                                <ul class="list-inline socialLink">
+                                    <li>
+                                        <div class="ini uk-float-right">
+                                            <a href="http://instagram.com/Leili.BUT" target="_blank" title="اینستاگرام">
+                                                <svg class="instag" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;" xml:space="preserve" width="31px" height="31px">
+                                                <path class="icon1" d="M168.496,111.025h15.219v65.454c0,3.996-3.24,7.236-7.236,7.236H66.188c-3.996,0-7.236-3.24-7.236-7.236v-65.454h15.219  c-0.723,3.323-1.115,6.769-1.115,10.308c0,26.663,21.614,48.277,48.277,48.277c26.663,0,48.277-21.614,48.277-48.277  C169.61,117.794,169.219,114.347,168.496,111.025z M121.333,153.852c17.959,0,32.518-14.559,32.518-32.518  c0-17.959-14.559-32.518-32.518-32.518c-17.959,0-32.518,14.559-32.518,32.518C88.815,139.293,103.374,153.852,121.333,153.852z   M160.293,87.937h12.385c3.631,0,6.575-2.944,6.575-6.575V68.978c0-3.631-2.943-6.574-6.575-6.574h-12.385  c-3.631,0-6.574,2.943-6.574,6.574v12.385C153.719,84.994,156.662,87.937,160.293,87.937z M242.667,0v242.667H0V0H242.667z   M198.623,63.539c0-10.766-8.728-19.494-19.494-19.494H63.539c-10.766,0-19.494,8.728-19.494,19.494v115.59  c0,10.766,8.728,19.494,19.494,19.494h115.59c10.766,0,19.494-8.728,19.494-19.494V63.539z" fill="#bebebe"></path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="telegram uk-float-right" style="margin-left:3px">
+                                            <a href="https://t.me/LeiliCosmetics" target="_blank" title="تلگرام">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;" xml:space="preserve" width="31px" height="31px">
+                                                <path class="icon2" d="M162.443,86.061l-54.044,50.235c-1.899,1.765-3.126,4.135-3.473,6.704l-1.839,13.641c-0.245,1.82-2.806,2.003-3.308,0.237  l-7.08-24.875c-0.808-2.839,0.37-5.87,2.883-7.418l65.484-40.334C162.241,83.528,163.454,85.121,162.443,86.061z M242.667,0v242.667  H0V0H242.667z M188.665,58.301l-137.51,53.047c-3.39,1.308-3.364,6.114,0.04,7.385L84.7,131.24l12.97,41.708  c0.831,2.671,4.099,3.656,6.267,1.888l18.677-15.226c1.958-1.596,4.744-1.674,6.788-0.19l33.689,24.459  c2.319,1.684,5.604,0.414,6.187-2.392l24.675-118.699C194.59,59.727,191.583,57.175,188.665,58.301z" fill="#bebebe"></path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-7 col-sm-pull-5 col-xs-12">
+                                <div class="copyRightText">
+                                    <p>&copy; 2017 Copyright <a target="_blank" href="http://www.LeiliBeauty.com/">Leili beauty </a> by <a target="_blank" href="http://www.LeiliBeauty.com/">Leili</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)*@
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    @Scripts.Render("~/plugins/jquery/jquery.min.js")
+    @Scripts.Render("~/plugins/jquery-ui/jquery-ui.min.js")
+    @Scripts.Render("~/plugins/bootstrap/js/bootstrap.min.js")
+    @Scripts.Render("~/plugins/selectbox/jquery.selectbox-0.1.3.min.js")
+    @Scripts.Render("~/plugins/owl-carousel/owl.carousel.min.js")
+    @Scripts.Render("~/plugins/isotope/isotope.min.js")
+    @Scripts.Render("~/plugins/fancybox/jquery.fancybox.min.js")
+    @Scripts.Render("~/plugins/isotope/isotope-triger.min.js")
+    @Scripts.Render("~/plugins/smoothscroll/SmoothScroll.min.js")
+    @Scripts.Render("~/plugins/datepicker/bootstrap-datepicker.min.js")
+    @Scripts.Render("~/plugins/syotimer/jquery.syotimer.min.js")
+    @Scripts.Render("~/js/custom.js")
+
+    <script>
+
+        //paste this code under head tag or in a seperate js file.
+        // Wait for window load
+        $(window).load(function () {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+        });
+
+        function changeSearchVisibility() {
+            alert(sfssf);
+            //document.getElementById("searchDiv").style.display = "block";
+        }
+    </script>
+
+    @*<link href="~/options/optionswitch.css" rel="stylesheet">*@
+    @*<script src="~/options/optionswitcher.js"></script>*@
+</body>
+</html>

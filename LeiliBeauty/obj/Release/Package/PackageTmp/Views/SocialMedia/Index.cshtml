@@ -1,0 +1,88 @@
+﻿@model LeiliBeauty.Models.SocialMediaModels
+@{
+    ViewBag.Title = "گروه های اجتماعی";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<body>
+    <section class="container-fluid clearfix aboutSection patternbg">
+        <div>
+            <div class="row">
+                <div class="aboutInfo">
+                    <h2>Oriflame in Instagram</h2>
+                    <textarea id="InstagramDescription">
+                        @Model.InstagramDescription
+                    </textarea>
+                    <button id="button" onclick="copyFunction('InstagramDescription')">Copy</button>
+                </div>
+
+                <div class="aboutInfo">
+                    <h2>Oriflame for Telegram Image</h2>
+                    <textarea id="TelegramImageDescription">
+                        @Model.TelegramImageDescription
+                    </textarea>
+                    <button id="button" onclick="copyFunction('TelegramImageDescription')">Copy</button>
+                </div>
+
+                <div class="aboutInfo">
+                    <h2>Oriflame in Telegram</h2>
+                    <textarea id="TelegramDescription">
+                        @Model.TelegramDescription
+                    </textarea>
+                    <button id="button" onclick="copyFunction('TelegramDescription')">Copy</button>
+                </div>
+
+                <div class="aboutInfo">
+                    <h2>Catalog Links</h2>
+                    <textarea id="CatalogLinks">
+                        @Model.CatalogLinks
+                    </textarea>
+                    <button id="button" onclick="copyFunction('CatalogLinks')">Copy</button>
+                </div>
+
+                <div class="aboutInfo">
+                    <h2>Instagram linkes</h2>
+                    <textarea id="StoreLinks">
+                        @Model.StoreLinks
+                    </textarea>
+                    <button id="button" onclick="copyFunction('StoreLinks')">Copy</button>
+                </div>
+
+                <div class="aboutInfo">
+                    <h2>Images</h2>
+                    <div class="row">
+                        @foreach (string imageurl in Model.ImagUrls)
+                        {
+                            try
+                            {
+                                <div class="col-sm-3 isotopeSelector makeup">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="@Url.Content(imageurl)" alt="" />
+
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            catch (Exception)
+                            {
+
+                                throw;
+                            }
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function copyFunction(id) {
+            var copyText = document.getElementById(id);
+            copyText.select();
+            document.execCommand("copy");
+        }
+    </script>
+</body>

@@ -1,0 +1,6 @@
+﻿@model LeiliBeauty.Models.Order
+@{
+    Layout = null;
+}
+
+@Html.EditorForMany(x => x.OrderDetails, x => x.Index)

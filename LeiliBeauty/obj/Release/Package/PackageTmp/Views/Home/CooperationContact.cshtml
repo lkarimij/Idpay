@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "تماس جهت اشتغال";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+    <section class="clearfix contactSection padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <img src="~/img/home/Contact-us-LeiliBeauty.jpg" alt="contact LeiliBeauty" class="img-responsive">
+                    <div class="holdingInfo patternbg">
+                        
+                        <h3>اطلاعات تماس واحد تخصیص کد فروشندگی</h3>
+                        <ul>
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i> ایران </li>
+                            <li dir="ltr"><i class="fa fa-phone" aria-hidden="true"></i> 0921 68 67 207 @*<br>0921 68 67 207*@ </li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="lkj.oriflame@gmail.com">lkj.oriflame@gmail.com</a> <br><a href="lkarimij@gmail.com">lkarimij@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="contactTitle">
+                        <h3>با ما در تماس باشید</h3>
+                    </div>
+                    <div class="contactForm">
+                        @model LeiliBeauty.Models.EmailFormModel
+
+                        <!-- Contact starts here -->
+                        @using (Html.BeginForm("CooperationContact", "Home", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                        @Html.AntiForgeryToken()
+
+                                    <!-- form -->
+                        <form>
+                            <div class="form-group ">
+                                @Html.TextBoxFor(m => m.FromName, new { @class = "form-control", @placeholder = "Enter your Name" })
+                                @Html.ValidationMessageFor(m => m.FromName)
+                            </div>
+                            <div class="form-group ">
+                                @Html.TextBoxFor(m => m.FromEmail, new { @class = "form-control", @placeholder = "Enter your email" })
+                                @Html.ValidationMessageFor(m => m.FromEmail)
+                            </div>
+                            <div class="form-group">
+                                @Html.TextAreaFor(m => m.Message, new { @class = "form-control", @placeholder = "Enter your message" })
+                                @Html.ValidationMessageFor(m => m.Message)
+                            </div>
+                            <div class="g-recaptcha" data-sitekey="6Lf4U1wUAAAAANCgBig0DoJCe2tWU7k-I_RRVXme"></div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary first-btn">Send Message</button>
+                            </div>
+                        </form>
+
+                        }
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</body>
+

@@ -1,0 +1,90 @@
+﻿@model LeiliBeauty.Models.ProductListViewModels
+@{
+    ViewBag.Title = "موجودی انبار";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <script>
+        function showUnavailable() {
+            var x = document.getElementsByClassName("UnavailableClass");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "block";
+            }
+        }
+        function hideUnavailable() {
+            var x = document.getElementsByClassName("UnavailableClass");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+        }
+    </script>
+    <section class="clearfix pricingSection">
+        <div class="container">
+            <div class="container">
+                <div class="secotionTitle col-md-3 col-sm-6 col-xs-12">
+                    <h2><span>Products</span>محصولات</h2>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12" style="padding:50px 0 0 0;">
+                    <div style="@(string.IsNullOrEmpty(Model.Filter)?"display:none":"display:block");">
+                        <input type="radio" onclick="showUnavailable()" name="ListFilterType" value="All" class="custom-control-input" checked /> تمام محصولها <br />
+                    </div>
+                    <input type="radio" onclick="hideUnavailable()" name="ListFilterType" value="Available" style="background-color:red;color:red" /> محصولات موجود
+                </div>
+            </div>
+            @if (Model.Products == null || Model.Products.Count <= 0)
+            {
+                <p>
+                    محصولی با این مشخصات در اوریفلیم لیلی موجود نیست
+                </p>
+            }
+
+            @foreach (LeiliBeauty.Models.ProductViewModels[] products in Model.Products)
+            {
+                <div class="row">
+                    @foreach (LeiliBeauty.Models.ProductViewModels product in products)
+                {
+                    if (product != null)
+                    {
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 @(product.InStore? "StoreClass":"UnavailableClass")">
+                                <div class="priceTableWrapper">
+                                    <div class="priceImage" style="background-image: url(@product.ImagUrls.DefaultIfEmpty("~/img/logo.png").First());">
+                                        <img src="@Url.Content(product.ImagUrls.DefaultIfEmpty("~/img/logo.png").First())" alt="Image Price" class="img-responsive">
+                                        <div class="maskImage">
+                                            <h3>
+                                                @if (product.InStore)
+                                                {
+                                                    <a href="@Url.Action("Index", "Order", new { code = product.ProductCode })" title="افزودن به سبد خرید">
+                                                        <i class="fa fa-shopping-cart" aria-hidden="true" style="color:rgba(204, 102, 153, 0.65)"></i>
+                                                    </a>
+                                                }
+                                            </h3>
+                                        </div>
+                                        <div class="priceTag">
+                                            <h4>@product.ProductCode</h4>
+                                        </div>
+                                    </div>
+                                    <div class="priceInfo">
+                                        <ul class="list-unstyled">
+                                            <li>@product.PersianName</li>
+                                            <li>@product.EnglishName</li>
+                                            <li>@product.Description100Char</li>
+                                            @if (product.InStore)
+                                            {
+                                                <li>@product.StorePrice تومان</li>
+                                            }
+                                        </ul>
+                                        @Html.ActionLink("اطلاعات بیشتر", "Detail", "Product", new { id = Utils.GenerateSlug(product.ProductCode, product.PersianName), InStore = true }, new { @class = "btn btn-primary first-btn" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+
+                    }
+                </div>
+            }
+        </div>
+    </section>
+</body>

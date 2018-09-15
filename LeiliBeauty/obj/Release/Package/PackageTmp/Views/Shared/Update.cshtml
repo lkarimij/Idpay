@@ -1,0 +1,18 @@
+﻿@model LeiliBeauty.Models.UpdateModel
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Updating</title>
+</head>
+<body>
+    <div class="container">
+        <div class="secotionTitle">
+            <h2><span>Updating</span>بازدیدکننده محترم</h2>
+            <h3>این صفحه به زودی راه اندازی میشود</h3>
+        </div>
+    </div>
+    <img src="~/img/updatemakeup.jpg" alt="صفحه در حال بروزرسانی است" class="img-responsive">
+    <input type="button" class="btn btn-karimi submit" value="Back" onclick="location.href='@Url.Action(@Model.Action, @Model.Controller)'" />
+    @Html.ActionLink("اطلاعات بیشتر", Model.Action, Model.Controller, null, new { @class = "btn btn-primary first-btn" })
+</body>
+</html>
